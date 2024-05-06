@@ -1,0 +1,19 @@
+npm init -y  para inicializar el proyecto cuando se crea
+node index.js para ejecutarlo
+ctrl+space: nos saldra lo que podemos hacer
+podemos hacer todo a qui en vez de hacerlo en el cliente
+query{
+ personaCount
+}
+
+query{
+  allPersonas {
+    nombre
+  }
+}
+
+query{
+  findPersona(nombre:"Valentina"){
+    celular
+  }
+}
