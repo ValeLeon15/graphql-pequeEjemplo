@@ -1,7 +1,12 @@
 npm init -y  para inicializar el proyecto cuando se crea
 node index.js para ejecutarlo
+npx nodemon index.js para ejecutarlo con actualizaciones 
+queries:
 ctrl+space: nos saldra lo que podemos hacer
-podemos hacer todo a qui en vez de hacerlo en el cliente
+podemos hacer todo a qui en vez de hacerlo en el cliente y debemos preguntarnos siempre como debe ser 
+facilmente preguntada la información 
+Todas las query tienen un solo endpoint una solo url no como en rest que todas son
+diferentes, solo sera un post con una query a un solo endpoint
 query{
  personaCount
 }
@@ -15,5 +20,32 @@ query{
 query{
   findPersona(nombre:"Valentina"){
     celular
+  }
+}
+
+query{
+  findPersona(nombre: "Valentina") {
+    dirreccion{
+      barrio
+      ciudad
+    }
+  }
+}
+
+cambiar datos= mutations, cambiar algo
+npm install uuid para generar el id
+mutation{
+  addPersona(
+    nombre:"Lola1"
+    celular:"123"
+    barrio: "Marsella"
+    ciudad: "Medellin"
+  ){
+    nombre
+    celular
+    direccion {
+      barrio
+    }
+    id
   }
 }
